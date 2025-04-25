@@ -32,13 +32,14 @@ const ProductList: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+//   useEffect(() => {
+//     fetchProducts();
+//   }, []);
 
   return (
     <div>
       <h1>Product List</h1>
+     <button onClick={fetchProducts}>Load Products</button>
       {loading && <p>Loading products...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {!loading && !error && (
