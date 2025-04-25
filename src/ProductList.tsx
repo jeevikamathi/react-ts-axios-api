@@ -31,7 +31,7 @@ const ProductList: React.FC = () => {
       setLoading(false);
     }
   };
-
+//Listing a product when component renders initially
 //   useEffect(() => {
 //     fetchProducts();
 //   }, []);
@@ -39,8 +39,13 @@ const ProductList: React.FC = () => {
   return (
     <div>
       <h1>Product List</h1>
+
+     {/* Manually trigger to listing a Products when clicks a button */}
      {/* <button onClick={fetchProducts}>Load Products</button> */}
+
+     {/* Listing a Products when hover a div */}
      <div onMouseEnter={fetchProducts}>Load Products</div>
+
       {loading && <p>Loading products...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {!loading && !error && (
