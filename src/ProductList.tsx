@@ -39,7 +39,8 @@ const ProductList: React.FC = () => {
   return (
     <div>
       <h1>Product List</h1>
-     <button onClick={fetchProducts}>Load Products</button>
+     {/* <button onClick={fetchProducts}>Load Products</button> */}
+     <div onMouseEnter={fetchProducts}>Load Products</div>
       {loading && <p>Loading products...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {!loading && !error && (
